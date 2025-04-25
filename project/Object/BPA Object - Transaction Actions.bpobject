@@ -578,327 +578,99 @@
           </element>
           <element name="input_quantity">
             <id>60305420-89bc-48c2-9ce0-fad5afeae34a</id>
-            <element name="Element1">
+            <element name="input_upper">
               <id>c19c32ba-a746-4514-8763-98e49059cc8a</id>
-              <type>AAElement</type>
-              <basetype>AAElement</basetype>
+              <type>UIAEdit</type>
+              <basetype>UIAEdit</basetype>
               <datatype>text</datatype>
               <diagnose>False</diagnose>
               <attributes>
-                <attribute name="WindowText" inuse="True" isUserVisible="True">
+                <attribute name="uX" isUserVisible="True">
+                  <ProcessValue datatype="number" value="498" />
+                </attribute>
+                <attribute name="uY" isUserVisible="True">
+                  <ProcessValue datatype="number" value="270" />
+                </attribute>
+                <attribute name="uWidth" isUserVisible="True">
+                  <ProcessValue datatype="number" value="306" />
+                </attribute>
+                <attribute name="uHeight" isUserVisible="True">
+                  <ProcessValue datatype="number" value="25" />
+                </attribute>
+                <attribute name="uClassName" isUserVisible="True">
+                  <ProcessValue datatype="text" value="Edit" />
+                </attribute>
+                <attribute name="uAutomationId" inuse="True" isUserVisible="True">
+                  <ProcessValue datatype="text" value="1001" />
+                </attribute>
+                <attribute name="uControlType" inuse="True" isUserVisible="True">
+                  <ProcessValue datatype="text" value="Edit" />
+                </attribute>
+                <attribute name="uLocalizedControlType" isUserVisible="True">
+                  <ProcessValue datatype="text" value="edit" />
+                </attribute>
+                <attribute name="uIsPassword" isUserVisible="True">
+                  <ProcessValue datatype="flag" value="False" />
+                </attribute>
+                <attribute name="uIsRequiredForForm" isUserVisible="True">
+                  <ProcessValue datatype="flag" value="False" />
+                </attribute>
+                <attribute name="uName" inuse="True" isUserVisible="True">
                   <ProcessValue datatype="text" value="" />
                 </attribute>
-                <attribute name="ClassName" inuse="True" isUserVisible="True">
-                  <ProcessValue datatype="text" value="ComboLBox" />
+                <attribute name="uOrientation" isUserVisible="True">
+                  <ProcessValue datatype="text" value="None" />
                 </attribute>
-                <attribute name="CtrlID" isUserVisible="True">
-                  <ProcessValue datatype="number" value="1000" />
-                </attribute>
-                <attribute name="X" isUserVisible="True">
-                  <ProcessValue datatype="number" value="475" />
-                </attribute>
-                <attribute name="Y" isUserVisible="True">
-                  <ProcessValue datatype="number" value="293" />
-                </attribute>
-                <attribute name="Width" isUserVisible="True">
-                  <ProcessValue datatype="number" value="330" />
-                </attribute>
-                <attribute name="Height" isUserVisible="True">
-                  <ProcessValue datatype="number" value="693" />
-                </attribute>
-                <attribute name="Visible" inuse="True" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="True" />
-                </attribute>
-                <attribute name="ScreenVisible" inuse="True" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="True" />
-                </attribute>
-                <attribute name="Enabled" inuse="True" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="True" />
-                </attribute>
-                <attribute name="Active" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Ordinal" isUserVisible="True">
-                  <ProcessValue datatype="number" value="1" />
-                </attribute>
-                <attribute name="ChildCount" isUserVisible="True">
-                  <ProcessValue datatype="number" value="0" />
-                </attribute>
-                <attribute name="AncestorsText" isUserVisible="True">
-                  <ProcessValue datatype="text" value="&lt;UNKNOWN&gt;" />
-                </attribute>
-                <attribute name="AncestorCount" isUserVisible="True">
-                  <ProcessValue datatype="number" value="1" />
-                </attribute>
-                <attribute name="TypeName" isUserVisible="True">
-                  <ProcessValue datatype="text" value="ComboLBox" />
-                </attribute>
-                <attribute name="ScreenBounds" isUserVisible="True">
-                  <ProcessValue datatype="text" value="RECT:476,294,984,786" />
-                </attribute>
-                <attribute name="Style" isUserVisible="True">
-                  <ProcessValue datatype="number" value="1419804737" />
-                </attribute>
-                <attribute name="aX" isUserVisible="True">
-                  <ProcessValue datatype="number" value="1" />
-                </attribute>
-                <attribute name="aY" isUserVisible="True">
-                  <ProcessValue datatype="number" value="116" />
-                </attribute>
-                <attribute name="aWidth" isUserVisible="True">
-                  <ProcessValue datatype="number" value="310" />
-                </attribute>
-                <attribute name="aHeight" isUserVisible="True">
-                  <ProcessValue datatype="number" value="23" />
-                </attribute>
-                <attribute name="Name" inuse="True" isUserVisible="True">
-                  <ProcessValue datatype="text" value="6" />
-                </attribute>
-                <attribute name="Description" inuse="True" isUserVisible="True">
+                <attribute name="uItemStatus" isUserVisible="True">
                   <ProcessValue datatype="text" value="" />
                 </attribute>
-                <attribute name="Role" inuse="True" isUserVisible="True">
-                  <ProcessValue datatype="text" value="ListItem" />
-                </attribute>
-                <attribute name="ID" comparisontype="RegEx" inuse="True" isUserVisible="True">
+                <attribute name="uItemType" inuse="True" isUserVisible="True">
                   <ProcessValue datatype="text" value="" />
                 </attribute>
-                <attribute name="State" isUserVisible="True">
-                  <ProcessValue datatype="text" value="selectable" />
+                <attribute name="uOffscreen" isUserVisible="True">
+                  <ProcessValue datatype="flag" value="False" />
                 </attribute>
-                <attribute name="Value2" inuse="True" isUserVisible="True">
+                <attribute name="uTopLevelWindowId" inuse="True" isUserVisible="True">
+                  <ProcessValue datatype="text" value="frm_Main" />
+                </attribute>
+                <attribute name="uLabeledBy" isUserVisible="True">
                   <ProcessValue datatype="text" value="" />
                 </attribute>
-                <attribute name="KeyboardShortcut" inuse="True" isUserVisible="True">
+                <attribute name="uEnabled" isUserVisible="True">
+                  <ProcessValue datatype="text" value="True" />
+                </attribute>
+                <attribute name="uAcceleratorKey" isUserVisible="True">
                   <ProcessValue datatype="text" value="" />
                 </attribute>
-                <attribute name="DefaultAction" inuse="True" isUserVisible="True">
-                  <ProcessValue datatype="text" value="Double Click" />
-                </attribute>
-                <attribute name="ElementCount" inuse="True" isUserVisible="True">
-                  <ProcessValue datatype="number" value="0" />
-                </attribute>
-                <attribute name="aAncestorCount" isUserVisible="True">
-                  <ProcessValue datatype="number" value="13" />
-                </attribute>
-                <attribute name="Unavailable" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Selected" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="True" />
-                </attribute>
-                <attribute name="Focused" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Pressed" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="aChecked" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Mixed" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="ReadOnly" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Hottracked" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Default" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Expanded" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Collapsed" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Busy" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Floating" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Marqueed" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Animated" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Invisible" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Offscreen" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Sizeable" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Moveable" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="SelfVoicing" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Focusable" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="True" />
-                </attribute>
-                <attribute name="Selectable" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="True" />
-                </attribute>
-                <attribute name="Linked" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Traversed" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Multiselectable" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Extselectable" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Alert_low" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Alert_medium" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="Alert_high" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="paX" isUserVisible="True">
-                  <ProcessValue datatype="number" value="0" />
-                </attribute>
-                <attribute name="paY" isUserVisible="True">
-                  <ProcessValue datatype="number" value="31" />
-                </attribute>
-                <attribute name="paWidth" isUserVisible="True">
-                  <ProcessValue datatype="number" value="329" />
-                </attribute>
-                <attribute name="paHeight" isUserVisible="True">
-                  <ProcessValue datatype="number" value="692" />
-                </attribute>
-                <attribute name="pName" inuse="True" isUserVisible="True">
+                <attribute name="uAccessKey" isUserVisible="True">
                   <ProcessValue datatype="text" value="" />
                 </attribute>
-                <attribute name="pDescription" inuse="True" isUserVisible="True">
+                <attribute name="uHasKeyboardFocus" isUserVisible="True">
+                  <ProcessValue datatype="text" value="True" />
+                </attribute>
+                <attribute name="uHelpText" isUserVisible="True">
                   <ProcessValue datatype="text" value="" />
                 </attribute>
-                <attribute name="pRole" inuse="True" isUserVisible="True">
-                  <ProcessValue datatype="text" value="Window" />
+                <attribute name="uProcessId" isUserVisible="True">
+                  <ProcessValue datatype="text" value="22784" />
                 </attribute>
-                <attribute name="pID" inuse="True" isUserVisible="True">
-                  <ProcessValue datatype="text" value="Self" />
+                <attribute name="puControlType" isUserVisible="True">
+                  <ProcessValue datatype="text" value="ComboBox" />
                 </attribute>
-                <attribute name="pState" isUserVisible="True">
-                  <ProcessValue datatype="text" value="focusable" />
+                <attribute name="puLocalizedControlType" isUserVisible="True">
+                  <ProcessValue datatype="text" value="combo box" />
                 </attribute>
-                <attribute name="pValue2" inuse="True" isUserVisible="True">
+                <attribute name="puClassName" isUserVisible="True">
+                  <ProcessValue datatype="text" value="WindowsForms10.COMBOBOX.app.0.141b42a_r8_ad1" />
+                </attribute>
+                <attribute name="puName" isUserVisible="True">
                   <ProcessValue datatype="text" value="" />
                 </attribute>
-                <attribute name="pKeyboardShortcut" inuse="True" isUserVisible="True">
-                  <ProcessValue datatype="text" value="" />
-                </attribute>
-                <attribute name="pDefaultAction" inuse="True" isUserVisible="True">
-                  <ProcessValue datatype="text" value="" />
-                </attribute>
-                <attribute name="pElementCount" isUserVisible="True">
-                  <ProcessValue datatype="number" value="7" />
-                </attribute>
-                <attribute name="pUnavailable" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pSelected" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pFocused" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pPressed" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="paChecked" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pMixed" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pReadOnly" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pHottracked" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pDefault" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pExpanded" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pCollapsed" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pBusy" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pFloating" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="True" />
-                </attribute>
-                <attribute name="pMarqueed" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pAnimated" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pInvisible" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pOffscreen" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pSizeable" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pMoveable" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pSelfVoicing" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pFocusable" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="True" />
-                </attribute>
-                <attribute name="pSelectable" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pLinked" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pTraversed" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pMultiselectable" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pExtselectable" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pAlert_low" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pAlert_medium" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
-                </attribute>
-                <attribute name="pAlert_high" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="False" />
+                <attribute name="puAutomationId" isUserVisible="True">
+                  <ProcessValue datatype="text" value="cmb_OrdersNew_Quantity" />
                 </attribute>
                 <attribute name="matchindex" isUserVisible="True">
                   <ProcessValue datatype="number" value="1" />
-                </attribute>
-                <attribute name="matchreverse" isUserVisible="True">
-                  <ProcessValue datatype="flag" value="True" />
                 </attribute>
               </attributes>
             </element>
@@ -1011,7 +783,7 @@
                 <attribute name="ClassName" inuse="True" isUserVisible="True">
                   <ProcessValue datatype="text" value="ComboLBox" />
                 </attribute>
-                <attribute name="CtrlID" isUserVisible="True">
+                <attribute name="CtrlID" inuse="True" isUserVisible="True">
                   <ProcessValue datatype="number" value="1000" />
                 </attribute>
                 <attribute name="X" isUserVisible="True">
@@ -1050,7 +822,7 @@
                 <attribute name="AncestorCount" isUserVisible="True">
                   <ProcessValue datatype="number" value="1" />
                 </attribute>
-                <attribute name="TypeName" isUserVisible="True">
+                <attribute name="TypeName" inuse="True" isUserVisible="True">
                   <ProcessValue datatype="text" value="ComboLBox" />
                 </attribute>
                 <attribute name="ScreenBounds" isUserVisible="True">
@@ -1071,8 +843,8 @@
                 <attribute name="aHeight" isUserVisible="True">
                   <ProcessValue datatype="number" value="23" />
                 </attribute>
-                <attribute name="Name" comparisontype="RegEx" inuse="True" isUserVisible="True">
-                  <ProcessValue datatype="text" value="\d+" />
+                <attribute name="Name" inuse="True" isUserVisible="True">
+                  <ProcessValue datatype="text" value="1" />
                 </attribute>
                 <attribute name="Description" inuse="True" isUserVisible="True">
                   <ProcessValue datatype="text" value="" />
@@ -1080,8 +852,8 @@
                 <attribute name="Role" inuse="True" isUserVisible="True">
                   <ProcessValue datatype="text" value="ListItem" />
                 </attribute>
-                <attribute name="ID" comparisontype="RegEx" inuse="True" isUserVisible="True">
-                  <ProcessValue datatype="text" value="\d+" />
+                <attribute name="ID" inuse="True" isUserVisible="True">
+                  <ProcessValue datatype="text" value="1" />
                 </attribute>
                 <attribute name="State" isUserVisible="True">
                   <ProcessValue datatype="text" value="selectable" />
@@ -2296,7 +2068,7 @@
   </appdef>
   <view>
     <camerax>29</camerax>
-    <cameray>21</cameray>
+    <cameray>0</cameray>
     <zoom version="2">1.25</zoom>
   </view>
   <preconditions />
@@ -2328,7 +2100,7 @@
   <subsheet subsheetid="eae3487a-6708-484f-bb14-edc611a16970" type="Normal" published="True">
     <name>Input Order</name>
     <view>
-      <camerax>0</camerax>
+      <camerax>-50</camerax>
       <cameray>42</cameray>
       <zoom version="2">1.25</zoom>
     </view>
@@ -2361,7 +2133,7 @@
     <name>Next Action</name>
     <view>
       <camerax>0</camerax>
-      <cameray>50</cameray>
+      <cameray>92</cameray>
       <zoom version="2">1.25</zoom>
     </view>
   </subsheet>
@@ -2481,7 +2253,7 @@ You will not be able to call this action from a business process, nor will it be
   <stage stageid="857ba628-0cb1-47d0-9553-bc5be3447eec" name="End" type="End">
     <subsheetid>eae3487a-6708-484f-bb14-edc611a16970</subsheetid>
     <loginhibit />
-    <display x="15" y="120" />
+    <display x="15" y="180" />
   </stage>
   <stage stageid="48b96823-0c1f-479c-84ad-2752009e3db0" name="Pop Up" type="SubSheetInfo">
     <subsheetid>972809e8-5a3d-4354-ad08-39cd05edaaad</subsheetid>
@@ -2686,16 +2458,10 @@ bln_priority = str_priority_order.Trim().ToUpper().Equals("TRUE")
   <stage stageid="b8db728a-2f41-4039-9f34-298ce1d3c9d2" name="Navigate3" type="Navigate" interval="2">
     <subsheetid>eae3487a-6708-484f-bb14-edc611a16970</subsheetid>
     <loginhibit />
-    <display x="105" y="45" />
-    <onsuccess>857ba628-0cb1-47d0-9553-bc5be3447eec</onsuccess>
+    <display x="120" y="90" />
+    <onsuccess>e65eea28-4f45-4a75-890a-f90aff2021c0</onsuccess>
     <step>
       <element id="e65f22a9-9616-48c4-82c8-75297cf275d3" />
-      <action>
-        <id>Press</id>
-      </action>
-    </step>
-    <step>
-      <element id="15eda419-fbb4-4af1-b555-ef349bb37924" />
       <action>
         <id>Press</id>
       </action>
@@ -2714,7 +2480,7 @@ bln_priority = str_priority_order.Trim().ToUpper().Equals("TRUE")
     <display x="15" y="15" />
     <decision expression="[priority]" />
     <ontrue>b8db728a-2f41-4039-9f34-298ce1d3c9d2</ontrue>
-    <onfalse>857ba628-0cb1-47d0-9553-bc5be3447eec</onfalse>
+    <onfalse>e65eea28-4f45-4a75-890a-f90aff2021c0</onfalse>
   </stage>
   <stage stageid="6df2466f-9483-4579-8e28-98b7574feb46" name="__init__" type="SubSheetInfo">
     <subsheetid>842ad5df-93fd-49b0-9336-ae52b39a4d98</subsheetid>
@@ -2755,7 +2521,7 @@ bln_priority = str_priority_order.Trim().ToUpper().Equals("TRUE")
     <loginhibit />
     <display x="15" y="240" />
     <outputs>
-      <output type="collection" name="Col Out" stage="Col Input" />
+      <output type="collection" name="Col Out" stage="Col Output" />
     </outputs>
   </stage>
   <stage stageid="52f612c1-faf4-416f-85f2-634b03144f32" name="get flag" type="SubSheet">
@@ -2802,18 +2568,18 @@ bln_priority = str_priority_order.Trim().ToUpper().Equals("TRUE")
       <input type="text" name="str_ref_num" expr="[ref num]" />
     </inputs>
     <outputs>
-      <output type="collection" name="dt_out" stage="Col Input" />
+      <output type="collection" name="dt_out" stage="Col Output" />
     </outputs>
     <onsuccess>55bb2e67-3687-4ceb-99ec-6fe23a884024</onsuccess>
     <code><![CDATA[Dim new_row As System.Data.DataRow = dt_in.NewRow()
 new_row(0) = str_ref_num
 dt_in.Rows().Add(new_row)
-dt_out = dt_in]]></code>
+dt_out = dt_in.Copy()]]></code>
   </stage>
   <stage stageid="8e43e07f-20e0-42f8-89be-17ca40081823" name="Col Input" type="Collection">
     <subsheetid>d55fda95-3b9d-490c-97e0-1226723d2799</subsheetid>
     <loginhibit />
-    <display x="180" y="-45" w="90" h="60" />
+    <display x="180" y="-75" w="90" h="60" />
     <datatype>collection</datatype>
     <private />
     <alwaysinit />
@@ -2833,9 +2599,9 @@ dt_out = dt_in]]></code>
       </action>
     </step>
     <step>
-      <element id="6b90cdd1-fd4f-4ef2-a7d8-b8df99062f42" />
+      <element id="c19c32ba-a746-4514-8763-98e49059cc8a" />
       <action>
-        <id>AASendKeys</id>
+        <id>UIASendKeys</id>
         <arguments>
           <argument>
             <id>newtext</id>
@@ -2849,9 +2615,9 @@ dt_out = dt_in]]></code>
       </action>
     </step>
     <step>
-      <element id="6b90cdd1-fd4f-4ef2-a7d8-b8df99062f42" />
+      <element id="c19c32ba-a746-4514-8763-98e49059cc8a" />
       <action>
-        <id>AASendKeys</id>
+        <id>UIASendKeys</id>
         <arguments>
           <argument>
             <id>newtext</id>
@@ -2887,6 +2653,26 @@ dt_out = dt_in]]></code>
       <element id="c8950a5a-79fa-471b-800c-684d2c0af7f5" />
       <action>
         <id>DetachApplication</id>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="73450d6b-7252-487a-93a2-79a2287ab5e5" name="Col Output" type="Collection">
+    <subsheetid>d55fda95-3b9d-490c-97e0-1226723d2799</subsheetid>
+    <loginhibit />
+    <display x="180" y="30" w="90" h="60" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e65eea28-4f45-4a75-890a-f90aff2021c0" name="Navigate3" type="Navigate" interval="2">
+    <subsheetid>eae3487a-6708-484f-bb14-edc611a16970</subsheetid>
+    <loginhibit />
+    <display x="-90" y="90" />
+    <onsuccess>857ba628-0cb1-47d0-9553-bc5be3447eec</onsuccess>
+    <step>
+      <element id="15eda419-fbb4-4af1-b555-ef349bb37924" />
+      <action>
+        <id>Press</id>
       </action>
     </step>
   </stage>

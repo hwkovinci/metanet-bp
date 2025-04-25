@@ -1,7 +1,7 @@
 ﻿<process name="My Process" version="1.0" bpversion="7.4.0.14902" narrative="My Process" byrefcollection="true" processrunningmessage="" disableversioning="false" preferredid="cf90df4e-8b67-4375-98eb-a1373acec148">
   <view>
-    <camerax>98</camerax>
-    <cameray>225</cameray>
+    <camerax>275</camerax>
+    <cameray>-114</cameray>
     <zoom version="2">1.25</zoom>
   </view>
   <preconditions />
@@ -38,18 +38,18 @@
     </collectioninfo>
     <initialvalue>
       <row>
-        <field name="Customer Acct Number" type="text" value="76012589" />
-        <field name="Product Code" type="text" value="ABC-125" />
-        <field name="Quantity" type="text" value="3" />
-        <field name="Unit Price" type="text" value="2.16" />
-        <field name="Priority Order" type="text" value="True" />
+        <field name="Customer Acct Number" type="text" value="11120725" />
+        <field name="Product Code" type="text" value="ABC-035" />
+        <field name="Quantity" type="text" value="25" />
+        <field name="Unit Price" type="text" value="10.99" />
+        <field name="Priority Order" type="text" value="False" />
       </row>
       <row>
-        <field name="Customer Acct Number" type="text" value="45051458" />
-        <field name="Product Code" type="text" value="ABC-127" />
-        <field name="Quantity" type="text" value="6" />
-        <field name="Unit Price" type="text" value="0.45" />
-        <field name="Priority Order" type="text" value="False" />
+        <field name="Customer Acct Number" type="text" value="11287256" />
+        <field name="Product Code" type="text" value="ABC-521" />
+        <field name="Quantity" type="text" value="15" />
+        <field name="Unit Price" type="text" value="21.99" />
+        <field name="Priority Order" type="text" value="True" />
       </row>
     </initialvalue>
   </stage>
@@ -77,7 +77,7 @@
   <stage stageid="1f81e211-66d4-4e36-b07a-20ddc127ffeb" name="Collections::Count Rows" type="Action">
     <subsheetid>0260caac-61fe-4242-b0a3-5ecb456e788f</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="15" y="45" />
+    <display x="15" y="-45" />
     <inputs>
       <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="[collection name]" />
     </inputs>
@@ -146,7 +146,7 @@
     <loginhibit onsuccess="true" />
     <display x="300" y="225" />
     <inputs>
-      <input type="collection" name="Ref Nums" friendlyname="Ref Nums" expr="" />
+      <input type="collection" name="Ref Nums" friendlyname="Ref Nums" expr="[Ref Nums]" />
     </inputs>
     <outputs>
       <output type="collection" name="Col Out" friendlyname="Col Out" stage="Ref Nums" />
@@ -157,11 +157,10 @@
   <stage stageid="b726599f-87d1-4548-a330-92045502b999" name="Ref Nums" type="Collection">
     <display x="405" y="-150" w="90" h="90" />
     <datatype>collection</datatype>
-    <private />
-    <alwaysinit />
     <collectioninfo>
       <field name="Ref Num" type="text" />
     </collectioninfo>
+    <noalwaysinit />
   </stage>
   <stage stageid="31059e31-f142-4a24-a981-feb55d9de782" name="Utility - Collection Manipulation::Merge Collection" type="Action">
     <loginhibit onsuccess="true" />
@@ -171,7 +170,7 @@
       <input type="collection" name="Collection 2" friendlyname="Collection 2" narrative="The second collection to be merged." expr="[Ref Nums]" />
     </inputs>
     <outputs>
-      <output type="collection" name="Collection 3" friendlyname="Collection 3" narrative="The resulting merged collection." stage="Orders" />
+      <output type="collection" name="Collection 3" friendlyname="Collection 3" narrative="The resulting merged collection." stage="Merged" />
     </outputs>
     <onsuccess>e3a72abe-6a14-4a82-9324-35143d065f65</onsuccess>
     <resource object="Utility - Collection Manipulation" action="Merge Collection" />
@@ -185,7 +184,7 @@
   <stage stageid="23808552-044c-47eb-a211-696be36ec41a" name="Utility - File Management::Get CSV Text As Collection" type="Action">
     <subsheetid>0260caac-61fe-4242-b0a3-5ecb456e788f</subsheetid>
     <loginhibit onsuccess="true" />
-    <display x="-120" y="-30" />
+    <display x="-210" y="-30" />
     <inputs>
       <input type="text" name="CSV File Path" friendlyname="CSV File Path" narrative="The full path to the CSV file" expr="[CSV File Path]" />
       <input type="flag" name="First Line Is Header" friendlyname="First Line Is Header" narrative="Set True if you want to treat the first line as a header" expr="[Include Header]" />
@@ -238,5 +237,11 @@
     </inputs>
     <onsuccess>5c298c94-b64f-46b0-9ed8-94d5a8b0cfe6</onsuccess>
     <resource object="Init Actions" action="__init__" />
+  </stage>
+  <stage stageid="1d3b854a-e07d-4d3f-8f1e-f2e0c9117f0c" name="Merged" type="Collection">
+    <display x="270" y="-60" w="90" h="60" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
   </stage>
 </process>
