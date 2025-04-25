@@ -1,0 +1,242 @@
+﻿<process name="My Process" version="1.0" bpversion="7.4.0.14902" narrative="My Process" byrefcollection="true" processrunningmessage="" disableversioning="false" preferredid="cf90df4e-8b67-4375-98eb-a1373acec148">
+  <view>
+    <camerax>98</camerax>
+    <cameray>225</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="0260caac-61fe-4242-b0a3-5ecb456e788f" type="Normal" published="False">
+    <name>Set Values</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="06a57ada-9abd-48a4-8d08-8df3bb94848d" name="Start" type="Start">
+    <display x="15" y="-165" />
+    <onsuccess>5c96d68c-e5ac-40e8-bb2e-854c800f3ef5</onsuccess>
+  </stage>
+  <stage stageid="31f269ea-9dd1-49f8-8f77-e86c8b9de56e" name="End" type="End">
+    <display x="120" y="390" />
+  </stage>
+  <stage stageid="62f74d3f-b3a6-43b0-bd18-c551d58bb97e" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="16e6cb98-4341-45a9-b9d2-44a9ae624ca7" name="Orders" type="Collection">
+    <loginhibit />
+    <display x="285" y="-150" w="120" h="90" />
+    <datatype>collection</datatype>
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Customer Acct Number" type="text" />
+      <field name="Product Code" type="text" />
+      <field name="Quantity" type="text" />
+      <field name="Unit Price" type="text" />
+      <field name="Priority Order" type="text" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="Customer Acct Number" type="text" value="76012589" />
+        <field name="Product Code" type="text" value="ABC-125" />
+        <field name="Quantity" type="text" value="3" />
+        <field name="Unit Price" type="text" value="2.16" />
+        <field name="Priority Order" type="text" value="True" />
+      </row>
+      <row>
+        <field name="Customer Acct Number" type="text" value="45051458" />
+        <field name="Product Code" type="text" value="ABC-127" />
+        <field name="Quantity" type="text" value="6" />
+        <field name="Unit Price" type="text" value="0.45" />
+        <field name="Priority Order" type="text" value="False" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="e7b92a96-d6da-4f0f-a8c2-c07c1eac5f6e" name="Set Values" type="SubSheetInfo">
+    <subsheetid>0260caac-61fe-4242-b0a3-5ecb456e788f</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="2979b023-c2db-445a-9326-65cbabc133dc" name="Start" type="Start">
+    <subsheetid>0260caac-61fe-4242-b0a3-5ecb456e788f</subsheetid>
+    <display x="15" y="-105" />
+    <onsuccess>1f81e211-66d4-4e36-b07a-20ddc127ffeb</onsuccess>
+  </stage>
+  <stage stageid="9f27229b-054c-42f2-8bc3-2bceec7462fb" name="End" type="End">
+    <subsheetid>0260caac-61fe-4242-b0a3-5ecb456e788f</subsheetid>
+    <display x="15" y="120" />
+  </stage>
+  <stage stageid="08d284cf-a904-487f-93be-697a5790526a" name="Row Count" type="Data">
+    <subsheetid>0260caac-61fe-4242-b0a3-5ecb456e788f</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="195" y="-30" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <alwaysinit />
+  </stage>
+  <stage stageid="1f81e211-66d4-4e36-b07a-20ddc127ffeb" name="Collections::Count Rows" type="Action">
+    <subsheetid>0260caac-61fe-4242-b0a3-5ecb456e788f</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="45" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="[collection name]" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Row Count" />
+    </outputs>
+    <onsuccess>9f27229b-054c-42f2-8bc3-2bceec7462fb</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="1bfe05fd-c23f-41bd-aff8-74d5aba67c7c" name="collection name" type="Data">
+    <subsheetid>0260caac-61fe-4242-b0a3-5ecb456e788f</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="225" y="-75" w="90" h="60" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">Orders</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5c96d68c-e5ac-40e8-bb2e-854c800f3ef5" name="Set Values" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-105" />
+    <onsuccess>e2d81e7f-eff5-4059-b8e3-54fd95b73bc9</onsuccess>
+    <processid>0260caac-61fe-4242-b0a3-5ecb456e788f</processid>
+  </stage>
+  <stage stageid="0d618e82-5ed7-4544-afe4-c23ec9279eb4" name="Transaction Actions::__init__" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="collection" name="queue item" friendlyname="queue item" expr="[Orders]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="Is Next" friendlyname="Is Next" stage="Process Order" />
+    </outputs>
+    <onsuccess>a05cc221-79dc-48a5-827c-56231288a66f</onsuccess>
+    <resource object="Transaction Actions" action="__init__" />
+  </stage>
+  <stage stageid="64145382-e8cd-4336-877d-23c9ec63f967" name="Loop End1" type="LoopEnd">
+    <loginhibit onsuccess="true" />
+    <display x="-15" y="225" />
+    <onsuccess>31059e31-f142-4a24-a981-feb55d9de782</onsuccess>
+    <groupid>2c5f2a75-6953-41e6-97b3-4f1c808e2881</groupid>
+  </stage>
+  <stage stageid="5c298c94-b64f-46b0-9ed8-94d5a8b0cfe6" name="Loop Start1" type="LoopStart">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="15" />
+    <onsuccess>0d618e82-5ed7-4544-afe4-c23ec9279eb4</onsuccess>
+    <groupid>2c5f2a75-6953-41e6-97b3-4f1c808e2881</groupid>
+    <looptype>ForEach</looptype>
+    <loopdata>Orders</loopdata>
+  </stage>
+  <stage stageid="3ed6c120-7d8e-41c5-8cf4-6e6c8aee783b" name="Process Order" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="510" y="-165" w="90" h="60" />
+    <datatype>flag</datatype>
+    <initialvalue>False</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a05cc221-79dc-48a5-827c-56231288a66f" name="Decision1" type="Decision">
+    <display x="150" y="75" />
+    <decision expression="[Process Order]" />
+    <ontrue>cce7f3a5-608c-4f1e-909e-bc84d6b40186</ontrue>
+    <onfalse>64145382-e8cd-4336-877d-23c9ec63f967</onfalse>
+  </stage>
+  <stage stageid="cce7f3a5-608c-4f1e-909e-bc84d6b40186" name="Transaction Actions::Next Action" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="300" y="225" />
+    <inputs>
+      <input type="collection" name="Ref Nums" friendlyname="Ref Nums" expr="" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Col Out" friendlyname="Col Out" stage="Ref Nums" />
+    </outputs>
+    <onsuccess>64145382-e8cd-4336-877d-23c9ec63f967</onsuccess>
+    <resource object="Transaction Actions" action="Next Action" />
+  </stage>
+  <stage stageid="b726599f-87d1-4548-a330-92045502b999" name="Ref Nums" type="Collection">
+    <display x="405" y="-150" w="90" h="90" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Ref Num" type="text" />
+    </collectioninfo>
+  </stage>
+  <stage stageid="31059e31-f142-4a24-a981-feb55d9de782" name="Utility - Collection Manipulation::Merge Collection" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="-15" y="300" />
+    <inputs>
+      <input type="collection" name="Collection 1" friendlyname="Collection 1" narrative="The first collection to be merged." expr="[Orders]" />
+      <input type="collection" name="Collection 2" friendlyname="Collection 2" narrative="The second collection to be merged." expr="[Ref Nums]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Collection 3" friendlyname="Collection 3" narrative="The resulting merged collection." stage="Orders" />
+    </outputs>
+    <onsuccess>e3a72abe-6a14-4a82-9324-35143d065f65</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Merge Collection" />
+  </stage>
+  <stage stageid="e3a72abe-6a14-4a82-9324-35143d065f65" name="Action1" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="120" y="300" />
+    <onsuccess>31f269ea-9dd1-49f8-8f77-e86c8b9de56e</onsuccess>
+    <resource object="Init Actions" action="__end__" />
+  </stage>
+  <stage stageid="23808552-044c-47eb-a211-696be36ec41a" name="Utility - File Management::Get CSV Text As Collection" type="Action">
+    <subsheetid>0260caac-61fe-4242-b0a3-5ecb456e788f</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-120" y="-30" />
+    <inputs>
+      <input type="text" name="CSV File Path" friendlyname="CSV File Path" narrative="The full path to the CSV file" expr="[CSV File Path]" />
+      <input type="flag" name="First Line Is Header" friendlyname="First Line Is Header" narrative="Set True if you want to treat the first line as a header" expr="[Include Header]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="CSV Values" friendlyname="CSV Values" narrative="The collection populated with the values of the CSV file" stage="Orders" />
+    </outputs>
+    <resource object="Utility - File Management" action="Get CSV Text As Collection" />
+  </stage>
+  <stage stageid="83db9c47-0cdf-49ac-b9ef-f1dfc717b732" name="Include Header" type="Data">
+    <subsheetid>0260caac-61fe-4242-b0a3-5ecb456e788f</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="180" y="15" w="90" h="60" />
+    <datatype>flag</datatype>
+    <initialvalue>True</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d0b7e65a-7765-4381-8c0f-6a46fa3c88a8" name="CSV File Path" type="Data">
+    <subsheetid>0260caac-61fe-4242-b0a3-5ecb456e788f</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="165" y="90" w="120" h="90" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">C:\BluePrism\Training\Applications\Windows\Orders.csv</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b84b1828-cae9-4008-93e5-d70962678480" name="id" type="Data">
+    <subsheetid>0260caac-61fe-4242-b0a3-5ecb456e788f</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="135" y="-165" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">Bp</initialvalue>
+    <alwaysinit />
+  </stage>
+  <stage stageid="139f6f03-e009-4034-8a99-edb29c176bda" name="password" type="Data">
+    <subsheetid>0260caac-61fe-4242-b0a3-5ecb456e788f</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="225" y="-165" />
+    <datatype>password</datatype>
+    <initialvalueenc>49,20,7,67,26,91,6,1</initialvalueenc>
+    <alwaysinit />
+  </stage>
+  <stage stageid="e2d81e7f-eff5-4059-b8e3-54fd95b73bc9" name="Init Actions::__init__" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-45" />
+    <inputs>
+      <input type="text" name="id" friendlyname="id" expr="[id]" />
+      <input type="password" name="password" friendlyname="password" expr="[password]" />
+    </inputs>
+    <onsuccess>5c298c94-b64f-46b0-9ed8-94d5a8b0cfe6</onsuccess>
+    <resource object="Init Actions" action="__init__" />
+  </stage>
+</process>
