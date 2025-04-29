@@ -388,7 +388,7 @@
   </appdef>
   <view>
     <camerax>0</camerax>
-    <cameray>0</cameray>
+    <cameray>-42</cameray>
     <zoom version="2">1.25</zoom>
   </view>
   <preconditions />
@@ -405,12 +405,20 @@
     <name>__init__</name>
     <view>
       <camerax>0</camerax>
-      <cameray>50</cameray>
+      <cameray>225</cameray>
       <zoom version="2">1.25</zoom>
     </view>
   </subsheet>
   <subsheet subsheetid="7ae615ca-52ae-410f-b7b9-57bf692182cb" type="Normal" published="True">
     <name>__end__</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="2b3c5a37-85ad-48cb-b6c3-bf962cb5afb2" type="Normal" published="True">
+    <name>Read CSV</name>
     <view>
       <camerax>0</camerax>
       <cameray>0</cameray>
@@ -473,6 +481,8 @@
     <inputs>
       <input type="text" name="id" stage="id" />
       <input type="password" name="password" stage="password" />
+      <input type="text" name="csv_path" stage="csv_path" />
+      <input type="text" name="csv_output_path" stage="csv_output_path" />
     </inputs>
     <onsuccess>a85cd6c5-0281-4d34-9786-3f66bf854ab9</onsuccess>
   </stage>
@@ -654,17 +664,20 @@ You will not be able to call this action from a business process, nor will it be
     <subsheetid>7ae615ca-52ae-410f-b7b9-57bf692182cb</subsheetid>
     <loginhibit />
     <display x="15" y="-120" />
-    <onsuccess>358bfece-3e05-4df3-aa95-2a96e574c523</onsuccess>
+    <inputs>
+      <input type="collection" name="col_in" stage="col_in" />
+    </inputs>
+    <onsuccess>e8cb7917-db0b-456b-9e5c-db1b399a7b52</onsuccess>
   </stage>
   <stage stageid="c7985be3-9d08-46fa-b042-69c6380e8db6" name="End" type="End">
     <subsheetid>7ae615ca-52ae-410f-b7b9-57bf692182cb</subsheetid>
     <loginhibit />
-    <display x="15" y="15" />
+    <display x="15" y="60" />
   </stage>
   <stage stageid="358bfece-3e05-4df3-aa95-2a96e574c523" name="Navigate3" type="Navigate">
     <subsheetid>7ae615ca-52ae-410f-b7b9-57bf692182cb</subsheetid>
     <loginhibit />
-    <display x="15" y="-60" />
+    <display x="15" y="0" />
     <onsuccess>c7985be3-9d08-46fa-b042-69c6380e8db6</onsuccess>
     <step>
       <element id="b90627cd-41c3-4547-8632-4e3d56f976b0" />
@@ -672,5 +685,130 @@ You will not be able to call this action from a business process, nor will it be
         <id>Terminate</id>
       </action>
     </step>
+  </stage>
+  <stage stageid="d5650d91-1514-424d-a063-a2ce1836122f" name="csv_path" type="Data">
+    <subsheetid>c31bf611-193e-46ff-a1c9-d5cea46a25b4</subsheetid>
+    <display x="195" y="0" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5bfd65d5-3026-4774-a162-0c52dc4bbbea" name="col out" type="Collection">
+    <subsheetid>c31bf611-193e-46ff-a1c9-d5cea46a25b4</subsheetid>
+    <display x="195" y="60" />
+    <datatype>collection</datatype>
+    <alwaysinit />
+  </stage>
+  <stage stageid="c4fc154c-68ae-44c1-82b4-894a70a1e69c" name="Read CSV" type="SubSheetInfo">
+    <subsheetid>2b3c5a37-85ad-48cb-b6c3-bf962cb5afb2</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="1d6d0f0e-3ede-4b59-80d2-73bd7606ab0c" name="Start" type="Start">
+    <subsheetid>2b3c5a37-85ad-48cb-b6c3-bf962cb5afb2</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>bf717bf8-827a-4a51-8774-f75ba744bd08</onsuccess>
+  </stage>
+  <stage stageid="db92b2df-f83a-4583-913e-cda48bb6cd3c" name="End" type="End">
+    <subsheetid>2b3c5a37-85ad-48cb-b6c3-bf962cb5afb2</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <outputs>
+      <output type="collection" name="col_out" stage="col out" />
+    </outputs>
+  </stage>
+  <stage stageid="bf717bf8-827a-4a51-8774-f75ba744bd08" name="Code2" type="Code">
+    <subsheetid>2b3c5a37-85ad-48cb-b6c3-bf962cb5afb2</subsheetid>
+    <loginhibit />
+    <display x="15" y="-45" />
+    <inputs>
+      <input type="text" name="csv_path" expr="[csv_path]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="col_out" stage="col out" />
+    </outputs>
+    <onsuccess>db92b2df-f83a-4583-913e-cda48bb6cd3c</onsuccess>
+    <code><![CDATA[Dim ReadCsv As Func(of String, System.Data.DataTable ) = Function( csvPath As String)
+
+   Dim dt As New DataTable()
+   If Not System.IO.File.Exists(csvPath) Then
+        Throw New System.IO.FileNotFoundException("CSV file not found at path: " & csvPath)
+    End If
+
+    Using reader As New System.IO.StreamReader(csvPath)
+        Dim headers() As String = Nothing
+
+        If Not reader.EndOfStream Then
+            headers = reader.ReadLine().Split(","c)
+            For Each header As String In headers
+                dt.Columns.Add(header.Trim())
+            Next
+        End If
+
+        While Not reader.EndOfStream
+            Dim line As String = reader.ReadLine()
+            Dim fields() As String = line.Split(","c)
+            dt.Rows.Add(fields)
+        End While
+    End Using
+
+    Return dt
+
+End Function  
+
+col_out = ReadCsv(csv_path)]]></code>
+  </stage>
+  <stage stageid="553f5fa3-8575-48a9-aedf-136feabef858" name="csv_output_path" type="Data">
+    <subsheetid>c31bf611-193e-46ff-a1c9-d5cea46a25b4</subsheetid>
+    <loginhibit />
+    <display x="270" y="0" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e8cb7917-db0b-456b-9e5c-db1b399a7b52" name="Code1" type="Code">
+    <subsheetid>7ae615ca-52ae-410f-b7b9-57bf692182cb</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <inputs>
+      <input type="collection" name="dt_in" expr="[col_in]" />
+      <input type="text" name="csv_path" expr="[csv_output_path]" />
+    </inputs>
+    <onsuccess>358bfece-3e05-4df3-aa95-2a96e574c523</onsuccess>
+    <code><![CDATA[Dim WriteDataTableToCsv As Action(of  DataTable, String) = Sub(dt As DataTable, csvPath As String)
+    Using writer As New System.IO.StreamWriter(csvPath, False, System.Text.Encoding.UTF8)
+        ' Write the header row
+        Dim headerValues As New System.Collections.Generic.List(Of String)
+        For Each column As DataColumn In dt.Columns
+            headerValues.Add(column.ColumnName)
+        Next
+        writer.WriteLine(String.Join(",", headerValues))
+
+        ' Write the data rows
+        For Each row As DataRow In dt.Rows
+            Dim fields As New  System.Collections.Generic.List(Of String)
+            For Each column As DataColumn In dt.Columns
+                Dim value As String = row(column).ToString()
+
+                ' Handle special characters (e.g., commas, quotes)
+                If value.Contains(",") OrElse value.Contains("""") Then
+                    value = """" & value.Replace("""", """""") & """"
+                End If
+
+                fields.Add(value)
+            Next
+            writer.WriteLine(String.Join(",", fields))
+        Next
+    End Using
+
+End Sub
+WriteDataTableToCsv(dt_in, csv_path)]]></code>
+  </stage>
+  <stage stageid="5f08814c-5a8c-446b-aefb-f52b7a2e89bc" name="col_in" type="Collection">
+    <subsheetid>7ae615ca-52ae-410f-b7b9-57bf692182cb</subsheetid>
+    <display x="135" y="-90" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
   </stage>
 </process>
